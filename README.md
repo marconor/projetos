@@ -48,8 +48,18 @@ O processo de carga da tabela fato foi feito através do script 'carga fato.sql'
 # 7-Powerbi (Dashboards dos requisitos do teste)
 Foi criado o arquivo 'trip.pbix' e publicado no seguinte link:
 https://app.powerbi.com/view?r=eyJrIjoiNjM4MDk4ZjctYWZkMy00MmYwLWFiM2YtMjY0YTllNmE4NDQ2IiwidCI6ImRkMDk4NWYxLTE5NDgtNDUwMy05YjlhLTYxYTgwMzMxYWI1MyJ9
-# 8-Requisitos enviados para análise:
+# 8-Quisitos enviados para análise:
   # Mínimos:
+  1.Qual a distância média percorrida por viagens com no máximo 2 passageiros; (Dashboard)
+  2.Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado; (Dashboard)
+  3.Faça um histograma da distribuição mensal, nos 4 anos, de corridas pagas em dinheiro; (Dashboard)
+  4.Faça um gráfico de série temporal contando a quantidade de gorjetas de cada dia, nos últimos 3 meses de 2012. (Dashboard)
+  # Bônus :
+  1.Qual o tempo médio das corridas nos dias de sábado e domingo; (Dashboard)
+	2.Conseguir provisionar todo seu ambiente em uma cloud pública, de preferência AWS. (AWS) 
+
+  
+
   
 
 
