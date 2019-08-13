@@ -51,11 +51,16 @@ https://app.powerbi.com/view?r=eyJrIjoiNjM4MDk4ZjctYWZkMy00MmYwLWFiM2YtMjY0YTllN
 # 8 - Quisitos enviados para análise:
   # Mínimos:
   1.Qual a distância média percorrida por viagens com no máximo 2 passageiros; (Dashboard)
+  
   2.Quais os 3 maiores vendors em quantidade total de dinheiro arrecadado; (Dashboard)
+  
   3.Faça um histograma da distribuição mensal, nos 4 anos, de corridas pagas em dinheiro; (Dashboard)
+  
   4.Faça um gráfico de série temporal contando a quantidade de gorjetas de cada dia, nos últimos 3 meses de 2012. (Dashboard)
+  
   # Bônus :
   1.Qual o tempo médio das corridas nos dias de sábado e domingo; (Dashboard)
+  
   2.Conseguir provisionar todo seu ambiente em uma cloud pública, de preferência AWS. (AWS) 
 
   
