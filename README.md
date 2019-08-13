@@ -79,10 +79,12 @@ A tabela dim_calendar foi criada e populada através do script 'scripts.sql'.
 O processo de carga da tabela fato foi feito através do script 'carga fato.sql'.
 
 # 7-Powerbi (Dashboards dos requisitos do teste)
+
 Foram publicados os gráficos no seguinte link:
 https://app.powerbi.com/view?r=eyJrIjoiNjM4MDk4ZjctYWZkMy00MmYwLWFiM2YtMjY0YTllNmE4NDQ2IiwidCI6ImRkMDk4NWYxLTE5NDgtNDUwMy05YjlhLTYxYTgwMzMxYWI1MyJ9
 
-# 8 - Quisitos enviados para análise:
+# 8 - Quesitos enviados para análise:
+
   # Mínimos:
   1. Qual a distância média percorrida por viagens com no máximo 2 passageiros; (Dashboard)
   
