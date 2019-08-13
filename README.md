@@ -34,14 +34,14 @@ ftrips (tabela fato);
 Os scripts para criação das tabelas estão no arquivo 'scrips.sql' .
 # 4 - Carga dos dados na Staging Area 
 Uma vez que os arquivos estão no Bucket S3, foi feita a carga dos arquivos para suas respectivas tabelas através do comando COPY no Query Editor do Redshift.
-copy public.stg_trips from 's3://marconor/export2009.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
-copy public.stg_trips from 's3://marconor/export2010.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
-copy public.stg_trips from 's3://marconor/export2011.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2009.csv' CREDENTIALS 'aws_access_key_id=xxxxx;aws_secret_access_key=xxxx' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2010.csv' CREDENTIALS 'aws_access_key_id=xxxxx;aws_secret_access_key=xxxx' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2011.csv' CREDENTIALS 'aws_access_key_id=xxxxx;aws_secret_access_key=xxxxx' delimiter ',' removequotes;
 copy public.stg_trips from 's3://marconor/export2012.csv' CREDENTIALS
-'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+'aws_access_key_id=xxxx;aws_secret_access_key=xxxxxx' delimiter ',' removequotes;
 # 5 - Carga dos dados nas tabelas Dimensão
-copy public.dim_vendor from 's3://marconor/dvendor.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
-copy public.dim_payment from 's3://marconor/dpayment.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.dim_vendor from 's3://marconor/dvendor.csv' CREDENTIALS 'aws_access_key_id=xxxxx;aws_secret_access_key=xxxxxx' delimiter ',' removequotes;
+copy public.dim_payment from 's3://marconor/dpayment.csv' CREDENTIALS 'aws_access_key_id=xxxxx;aws_secret_access_key=xxxxx' delimiter ',' removequotes;
 A tabela dim_calendar foi criada e populada através do script 'scripts.sql'.
 # 6 - Tranformação e carga na tabela Fato
 O processo de carga da tabela fato foi feito através do script 'carga fato.sql'.
@@ -56,7 +56,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjM4MDk4ZjctYWZkMy00MmYwLWFiM2YtMjY0YTllN
   4.Faça um gráfico de série temporal contando a quantidade de gorjetas de cada dia, nos últimos 3 meses de 2012. (Dashboard)
   # Bônus :
   1.Qual o tempo médio das corridas nos dias de sábado e domingo; (Dashboard)
-	2.Conseguir provisionar todo seu ambiente em uma cloud pública, de preferência AWS. (AWS) 
+  2.Conseguir provisionar todo seu ambiente em uma cloud pública, de preferência AWS. (AWS) 
 
   
 
