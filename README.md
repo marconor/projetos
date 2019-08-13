@@ -31,6 +31,15 @@ dim_vendor (dimensão);
 dim_payment (dimensão);
 stg_trips (staging area);
 ftrips (tabela fato);
+Os scripts para criação das tabelas estão no arquivo scrips.sql .
+# 4-Carga dos dados 
+Uma vez que os arquivos estão no Bucket S3, foi feita a carga dos arquivos para suas respectivas tabelas através do comando COPY no Query Editor do Redshift.
+copy public.stg_trips from 's3://marconor/export2009.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2010.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2011.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2012.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.dim_vendor from 's3://marconor/dvendor.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.dim_payment from 's3://marconor/dpayment.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
 
 
 
