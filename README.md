@@ -31,15 +31,28 @@ dim_vendor (dimensão);
 dim_payment (dimensão);
 stg_trips (staging area);
 ftrips (tabela fato);
-Os scripts para criação das tabelas estão no arquivo scrips.sql .
-# 4-Carga dos dados 
+Os scripts para criação das tabelas estão no arquivo 'scrips.sql' .
+# 4-Carga dos dados na Staging Area 
 Uma vez que os arquivos estão no Bucket S3, foi feita a carga dos arquivos para suas respectivas tabelas através do comando COPY no Query Editor do Redshift.
 copy public.stg_trips from 's3://marconor/export2009.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
 copy public.stg_trips from 's3://marconor/export2010.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
 copy public.stg_trips from 's3://marconor/export2011.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
-copy public.stg_trips from 's3://marconor/export2012.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+copy public.stg_trips from 's3://marconor/export2012.csv' CREDENTIALS
+'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+# 5-Carga dos dados nas tabelas Dimensão
 copy public.dim_vendor from 's3://marconor/dvendor.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
 copy public.dim_payment from 's3://marconor/dpayment.csv' CREDENTIALS 'aws_access_key_id=AKIAIDXTA43F5Q5NKDZQ;aws_secret_access_key=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' delimiter ',' removequotes;
+A tabela dim_calendar foi criada e populada através do script 'scripts.sql'.
+# 6-Tranformação e carga na tabela Fato
+O processo de carga da tabela fato foi feito através do script 'carga fato.sql'.
+# 7-Powerbi (Dashboards dos requisitos do teste)
+Foi criado o arquivo 'trip.pbix' e publicado no seguinte link:
+https://app.powerbi.com/view?r=eyJrIjoiNjM4MDk4ZjctYWZkMy00MmYwLWFiM2YtMjY0YTllNmE4NDQ2IiwidCI6ImRkMDk4NWYxLTE5NDgtNDUwMy05YjlhLTYxYTgwMzMxYWI1MyJ9
+# 8-Requisitos enviados para análise:
+  # Mínimos:
+  
+
+
 
 
 
